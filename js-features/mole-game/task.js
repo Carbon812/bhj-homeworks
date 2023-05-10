@@ -9,6 +9,7 @@ lost = parseInt(lost);
 let hole = document.getElementsByClassName("hole");
 console.log(hole);
 
+
 getHole = index => document.getElementById(`hole${index}`);
 
 for(let i = 1; i < hole.length + 1; i++){
@@ -17,7 +18,7 @@ for(let i = 1; i < hole.length + 1; i++){
 
 function f() {
     if(this.className.includes( 'hole_has-mole' )){
-        if(dead === 10){
+        if(dead === 9){
             alert("Victory!");
             dead_elem.textContent = 0;
             dead = -1;
@@ -27,7 +28,7 @@ function f() {
         dead += 1;
         dead_elem.textContent = dead;
     }else{
-        if(lost === 5){
+        if(lost === 4){
             alert("Lost!");
             dead_elem.textContent = 0;
             dead = 0;
