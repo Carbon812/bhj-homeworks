@@ -17,9 +17,11 @@ for(let i=0; i<sizes.length; i++){
         switch (dataSize) {
             case "small":
                 book.classList.add("font-size_small");
+                book.classList.remove("font-size_big");
                 break;
             case "big":
                 book.classList.add("font-size_big");
+                book.classList.remove("font-size_small");
                 break;
             default:
                 book.classList.remove("font-size_small", "font-size_big");
@@ -36,11 +38,11 @@ for(let i=0; i<colors.length; i++){
         switch (dataTextColor) {
             case "gray":
                 book.classList.add("book_color-gray");
-                book.classList.remove("book_color-whitesmoke");
+                book.classList.remove("book_color-whitesmoke", "book_color-black");
                 break;
             case "whitesmoke":
                 book.classList.add("book_color-whitesmoke");
-                book.classList.remove("book_color-gray");
+                book.classList.remove("book_color-gray","book_color-black");
                 break;
             default:
                 book.classList.remove("book_color-gray", "book_color-whitesmoke");
@@ -57,11 +59,11 @@ for(let i=0; i<bgcs.length; i++){
         switch (dataTextColor) {
             case "gray":
                 book.classList.add("book_bg-gray");
-                book.classList.remove("book_bg-white");
+                book.classList.remove("book_bg-white", "book_bg-black");
                 break;
             case "black":
                 book.classList.add("book_bg-black");
-                book.classList.remove("book_bg-gray");
+                book.classList.remove("book_bg-gray", "book_bg-white");
                 break;
             default:
                 book.classList.remove("book_bg-gray", "book_bg-black");
