@@ -21,22 +21,10 @@ taskAdd.addEventListener("click", function (event) {
 
 taskList.addEventListener("click", function (event) {
 
-    // let tasks__remove = Array.from(document.querySelectorAll(".task__remove"));
-    // let tasks = Array.from(document.querySelectorAll(".task"));
-    // for(let i=0; i<tasks__remove.length; i++){
-    //     if(event.target === tasks__remove[i]){
-    //         tasks[i].remove();
-    //     }
-    // }
-
-
-    let tasks = Array.from(document.querySelectorAll(".task"));
-
-    for(let i=0; i<tasks.length; i++){
-        if(event.target.classList.contains("task__remove")){
-            this.removeChild(event.target.parentNode);
-        }
+    if(event.target.classList.contains("task__remove")){
+        this.removeChild(event.target.parentNode);
     }
+
 });
 
 
