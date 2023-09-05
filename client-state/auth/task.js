@@ -2,15 +2,15 @@ const form = document.getElementById('signin__form');
 const user = document.getElementById("user_id");
 const welcome = document.getElementById("welcome");
 
-if(localStorage.getItem("user_id").length !== 0){
+if(localStorage.getItem("user_id") !== null){
     welcome.classList.add("welcome_active");
     user.innerHTML = localStorage.getItem("user_id");
 }
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    let xhr = new XMLHttpRequest();
-    let formData = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData(form);
 
     xhr.open("POST", "https://students.netoservices.ru/nestjs-backend/auth");
 
